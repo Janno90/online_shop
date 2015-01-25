@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users
+  root 'products#index'
+
+  resources :products, only: [:index, :show]
+  resources :line_items, only: [:create, :destroy]
+  get '/cart', to: 'carts#show'
+  delete '/carts', to: 'carts#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

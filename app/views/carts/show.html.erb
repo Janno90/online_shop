@@ -1,0 +1,21 @@
+<h1>Carts#show</h1>
+<table border=1>
+<tr>
+  <th>Amount</th>
+  <th>Name</th>
+  <th>Total Price</th>
+  <th>Actions</th>
+</tr>
+<% @line_items.each do |line_item| %>
+  <tr>
+    <td><%= line_item.amount %></td>
+    <td><%= line_item.product.name %></td>
+    <td><%= line_item.total_price %></td>
+    <td><%= link_to "X", line_item_path(line_item), method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+<p>
+Total price:
+<%= @cart.total_price %>
+</p>

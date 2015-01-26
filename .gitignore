@@ -15,3 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore robot result files
+test/robot/*.png
+test/robot/*.html
+test/robot/*.xml

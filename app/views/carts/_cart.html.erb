@@ -1,2 +1,2 @@
 <%= link_to "Cart Total Price: #{@cart.total_price}", '/cart' %>
-<%= link_to "Empty Cart", '/carts', method: :delete %>
+<%= link_to "Empty Cart", '/carts', method: :delete, remote: true, data: { confirm: "#{I18n.t('.confirm')}" } %>

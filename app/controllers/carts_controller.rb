@@ -5,6 +5,5 @@ class CartsController < ApplicationController
 
   def destroy
     @cart.destroy
-    redirect_to products_path
   end
 end

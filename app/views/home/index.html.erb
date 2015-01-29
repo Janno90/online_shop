@@ -1,0 +1,9 @@
+<div id="categories">
+  <ul>
+    <%= render partial: 'categories/category', collection: @categories %>
+  </ul>
+</div>
+<div id="newest-products">
+  <h3>Recently added products</h3>
+  <%= render partial: 'products/product', collection: @newest_products %>
+</div>

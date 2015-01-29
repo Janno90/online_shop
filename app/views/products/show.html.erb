@@ -1,0 +1,4 @@
+<%= link_to "Back", category_path(@product.category) %>
+<h2><%= @product.name %></h2>
+<%= link_to "Add to cart", line_items_path(product_id: @product.id), method: :post, remote: true %>
+<p><%= @product.description %></p>

@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  cart:
+    empty_cart: "Your cart is empty!"
+  confirm: "Are you sure?"

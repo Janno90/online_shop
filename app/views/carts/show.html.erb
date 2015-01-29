@@ -1,4 +1,4 @@
-<h1>Carts#show</h1>
+<h1>Cart</h1>
 <table border=1>
 <tr>
   <th>Amount</th>
@@ -19,3 +19,5 @@
 Total price:
 <%= @cart.total_price %>
 </p>
+
+<%= link_to "Order", new_order_path %>

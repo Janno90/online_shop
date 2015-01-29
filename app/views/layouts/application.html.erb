@@ -12,7 +12,19 @@
   <%= render partial: 'carts/cart' %>
 </div>
 
-<%= yield %>
+
+
+<div id="container">
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, class: "alert alert-info" %>
+  <% end %>
+  <div id="header">
+    <h1><%= link_to "OnlineShop", root_path %></h1>
+  </div>
+  <div id="main-content">
+    <%= yield %>
+  </div>
+</div>
 
 </body>
 </html>

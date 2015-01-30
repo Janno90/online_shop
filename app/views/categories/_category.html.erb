@@ -1,1 +1,1 @@
-<li><%= link_to "#{category_counter + 1}. #{category.name}", category_path(category) %></li>
+<li class="<%= "active" if category == @category %>"><%= link_to "#{category_counter + 1}. #{category.name}", category_path(category) %></li>

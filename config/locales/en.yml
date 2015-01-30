@@ -24,3 +24,5 @@ en:
   cart:
     empty_cart: "Your cart is empty!"
   confirm: "Are you sure?"
+  line_item:
+    added_to_cart: "Product added to a cart!"

@@ -8,21 +8,31 @@
 </head>
 <body>
 
-<div id="cart">
-  <%= render partial: 'carts/cart' %>
-</div>
+
 
 
 
 <div id="container">
-  <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, class: "alert alert-info" %>
-  <% end %>
+  <div id="cart">
+    <%= render partial: 'carts/cart' %>
+  </div>
+  <div class="clear"></div>
+  <div id="flash">
+    <%= render partial: 'shared/flash' %>
+  </div>
   <div id="header">
     <h1><%= link_to "OnlineShop", root_path %></h1>
   </div>
   <div id="main-content">
-    <%= yield %>
+    <div id="categories">
+      <ul>
+        <%= render partial: 'categories/category', collection: @categories %>
+      </ul>
+    </div>
+    <div id="right-container">
+      <%= yield %>
+    </div>
+    <div class="clear"></div>
   </div>
 </div>
 

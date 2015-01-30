@@ -5,4 +5,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :cart
+  before_filter :find_all_categories
+
+protected
+  def find_all_categories
+    @categories = Category.all
+  end
 end

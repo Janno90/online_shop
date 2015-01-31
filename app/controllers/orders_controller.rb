@@ -13,6 +13,7 @@ class OrdersController < ApplicationController
     if @order.valid?
       @order.save
     else
+      flash.now.alert = "Fill all required fields."
       render action: :new
     end
   end

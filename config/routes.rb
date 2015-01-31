@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :products, only: [:show]
   resources :line_items, only: [:create, :destroy]
   resources :categories, only: [:show]
-  resources :orders, only: [:new]
+  resources :orders, only: [:new, :create]
   get '/cart', to: 'carts#show'
   delete '/carts', to: 'carts#destroy'
   # The priority is based upon order of creation: first created -> highest priority.

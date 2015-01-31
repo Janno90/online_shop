@@ -7,4 +7,22 @@ class OrdersController < ApplicationController
     end
     @order = Order.new
   end
+
+  def create
+    @order = Order.new(order_params)
+    if @order.valid?
+      @order.save
+    else
+      render action: :new
+    end
+  end
+
+protected
+  def order_params
+    params.require(:order).permit(
+      :name, :street_address,
+      :city, :postcode,
+      :telephone
+    )
+  end
 end

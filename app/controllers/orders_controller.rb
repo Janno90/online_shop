@@ -10,8 +10,11 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
+    @order.cart = cart
     if @order.valid?
       @order.save
+      flash.now.notice = "Order has been sent!"
+      setup_new_cart
     else
       flash.now.alert = "Fill all required fields."
       render action: :new

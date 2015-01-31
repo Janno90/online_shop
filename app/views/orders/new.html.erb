@@ -1,4 +1,7 @@
 <h2 class="subtitle">Order</h2>
+
+<%= render partial: 'carts/cart', locals: {cart: @cart} %>
+
 <div id="orders">
   <%= form_for(@order) do |f| %>
     <%= f.label :name %>

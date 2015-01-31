@@ -1,2 +1,4 @@
-<h2><%= @category.name %></h2>
-<%= render partial: 'products/product', collection: @products %>
+<h2 id="subtitle"><%= @category.name %></h2>
+<div id="products">
+  <%= render partial: 'products/product', collection: @products %>
+</div>

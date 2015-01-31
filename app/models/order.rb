@@ -1,3 +1,4 @@
 class Order < ActiveRecord::Base
-  has_many :line_items, dependent: :destroy
+  has_one :cart
+  has_many :line_items, through: :cart
 end

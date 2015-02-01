@@ -1,7 +1,7 @@
 *** Settings ***
 
 Resource          resources/${ENVIRONMENT}.robot
-Suite Setup       Run Keywords  Open Browser And Open Frontpage
+Suite Setup       Open Browser And Open Frontpage
 Suite Teardown    Close Browser
 
 

@@ -1,14 +1,11 @@
 *** Keywords ***
-Select Category  [Arguments]  ${selector}
-  Click Link  css=#categories li:nth-child(${selector}) a
-
 Select Product  [Arguments]  ${selector}
   ${product_name} =  Get Text  css=#products p:nth-child(${selector}) a
   Click Link  css=#products p:nth-child(${selector}) a
   [return]  ${product_name}
 
 Add Valid Product To Cart
-  Select Category  1
+  Click '${valid_category}' Category
   Select Product  1
   Add Current Product To Cart
 
@@ -24,3 +21,6 @@ Confirm Subtitle  [Arguments]  ${text}
 
 Confirm Status Message  [Arguments]  ${text}
   Element Should Contain  css=#flash div  ${text}
+
+Click '${category}' Category
+  Click Link  css=#categories a.${category}

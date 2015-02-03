@@ -7,21 +7,18 @@ Suite Teardown    Close Browser
 
 Ordering Items
   Add Valid Product To Cart
-  Go To Cart
   Go To Order Page
   Confirm Subtitle  Order
-  Fill Order Form Succesfully
+  Fill Order Form With Valid Values
   Send Order
   Confirm Status Message  Order has been sent!
 
-
-
-
 *** Keywords ***
 Go To Order Page
+  Go To Cart
   Click Link  link=Order
 
-Fill Order Form Succesfully
+Fill Order Form With Valid Values
   Fill Name Field  Maija Meikäläinen
   Fill Street Address Field  Testikatu 12
   Fill City Field  Helsinki
